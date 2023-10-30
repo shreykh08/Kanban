@@ -1,0 +1,41 @@
+.navbar {
+  height: var(--navbar-height);
+  background-color: var(--accent-color);
+  width: 100%;
+  padding: var(--padding-main);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 2;
+}
+.navbar .options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+}
+.navbar .dropdown {
+  position: absolute;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 10rem;
+  font-size: 0.8rem;
+  background-color: var(--main-bg-color);
+  top: calc(var(--navbar-height) - 0.5rem);
+}
+.navbar .dropdown .row {
+  display: flex;
+  justify-content: space-between;
+}
+.navbar .dropdown .row select,
+.navbar .dropdown .row option {
+  text-transform: capitalize;
+}

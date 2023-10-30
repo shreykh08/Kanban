@@ -1,0 +1,10 @@
+main {
+  min-height: 100lvh;
+  min-height: 100svh;
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: max-content;
+}
+.kanban {
+  padding: var(--padding-main);
+}

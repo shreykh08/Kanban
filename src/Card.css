@@ -1,0 +1,73 @@
+.card {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1rem;
+  border-radius: 0.3175rem;
+  font-size: 0.8rem;
+}
+.card .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card .header .id {
+  color: var(--primary-text-color-2);
+}
+
+.card .header .photo {
+  width: 1.125rem;
+  height: 1.125rem;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  text-wrap: nowrap;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+.card .header .photo .status {
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -0.15rem;
+  right: -0.15rem;
+  border: 2px solid #fff;
+}
+.card .title {
+  font-weight: 500;
+  color: #000;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+.card .extra {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+.card .extra .detail {
+  padding: 0.25rem;
+  border-radius: 0.3175rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 0.75rem;
+  gap: 0.25rem;
+  color: var(--primary-text-color-2);
+}
+.card .extra .icon {
+  font-size: 1rem;
+}
+.card .extra .tag svg {
+  color: #bec2c7;
+  font-size: 0.6rem;
+}
