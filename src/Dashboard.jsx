@@ -16,14 +16,7 @@ import {
 } from "react-icons/md";
 import { LuAlertTriangle } from "react-icons/lu";
 
-export default function Dashboard({ groupBy, sortBy }) {
-  const tickets = !!localStorage.getItem("tickets")
-    ? JSON.parse(localStorage.getItem("tickets"))
-    : [];
-  const users = !!localStorage.getItem("users")
-    ? JSON.parse(localStorage.getItem("users"))
-    : [];
-
+export default function Dashboard({ groupBy, sortBy, tickets, users }) {
   const allStatus = ["Backlog", "Todo", "In progress", "Done", "Cancelled"];
 
   const allPriority = [
@@ -84,7 +77,7 @@ export default function Dashboard({ groupBy, sortBy }) {
                   <span className="heading">{status}</span>
                   <span className="count">
                     {
-                      tickets.filter((ticket) => ticket.status === status)
+                      tickets?.filter((ticket) => ticket.status === status)
                         .length
                     }
                   </span>

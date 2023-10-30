@@ -21,6 +21,8 @@ function App() {
       .then((res) => {
         localStorage.setItem("tickets", JSON.stringify(res.data.tickets));
         localStorage.setItem("users", JSON.stringify(res.data.users));
+        setTickets(res.data.tickets);
+        setUsers(res.data.users);
       })
       .catch((err) => {
         alert("Something went wrong");
@@ -38,6 +40,16 @@ function App() {
   const [sortBy, setSortBy] = useState(
     JSON.parse(localStorage.getItem("sortBy"))
   );
+  const [tickets, setTickets] = useState(
+    !!localStorage.getItem("tickets")
+      ? JSON.parse(localStorage.getItem("tickets"))
+      : []
+  );
+  const [users, setUsers] = useState(
+    !!localStorage.getItem("users")
+      ? JSON.parse(localStorage.getItem("users"))
+      : []
+  );
 
   return (
     <main className="kanban">
@@ -47,7 +59,12 @@ function App() {
         sortBy={sortBy}
         setSortBy={setSortBy}
       />
-      <Dashboard groupBy={groupBy} sortBy={sortBy} />
+      <Dashboard
+        groupBy={groupBy}
+        sortBy={sortBy}
+        tickets={tickets}
+        users={users}
+      />
     </main>
   );
 }
